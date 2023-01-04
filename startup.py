@@ -17,7 +17,6 @@ import sys
 import sgtk
 from sgtk.platform import SoftwareLauncher, SoftwareVersion, LaunchInformation
 
-
 __author__ = "Diego Garcia Huerta"
 __contact__ = "https://www.linkedin.com/in/diegogh/"
 
@@ -50,12 +49,9 @@ class BlenderLauncher(SoftwareLauncher):
             "$BLENDER_BIN_DIR/Blender",
             "/Library/Application Support/Blender.app/Contents/MacOS/Blender",
         ],
-        "win32": [
-            "$BLENDER_BIN_DIR/blender.exe",
-            "$USERPROFILE/AppData/Roaming/Blender Foundation/Blender/{version}/blender.exe",
-            "C:/Program Files/Blender Foundation/Blender {version}/blender.exe",
-            "C:/Program Files/Blender Foundation/Blender/blender.exe",
-        ],
+        "win32": ["M:/globals/applications/blender-2.92/blender.exe",
+                  "M:/globals/applications/blender-3.1/blender.exe"
+                  ],
         "linux2": ["$BLENDER_BIN_DIR/blender", "/usr/share/blender/blender"],
     }
 

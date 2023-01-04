@@ -322,7 +322,10 @@ class BlenderEngine(Engine):
         Runs after the engine is set up but before any apps have been
         initialized.
         """
-        from tank.platform.qt import QtCore
+        try:
+            from tank.platform.qt import QtCore
+        except ImportError:
+            pass
 
         # unicode characters returned by the shotgun api need to be converted
         # to display correctly in all of the app windows
@@ -385,7 +388,10 @@ class BlenderEngine(Engine):
             if show_warning_dlg:
                 # Note, title is padded to try to ensure dialog isn't insanely
                 # narrow!
-                self.show_info(msg)
+                try:
+                    self.show_info(msg)
+                except ImportError:
+                    pass
 
             # always log the warning to the script editor:
             self.logger.warning(msg)
