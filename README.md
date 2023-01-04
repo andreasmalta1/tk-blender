@@ -10,7 +10,7 @@ The changes are slight and mainly deal with errors that happen during start up.
 The rest is the same and to set it up you should still follow Diego's instructions below.
 Two major points to cover:
 1. Do not forget to install PySide2 in the Blender python package. This is detailed by Diego himself down below.
-2. Since Blender is open source, it moves forward very quickly and tehrefore it is always using the latest python version. Shotgrid does lack behind. For this reason I had to make a change to the app_store tk-multi-publish2 which basically forks away from the original SG installation. The change is as follows:
+2. Since Blender is open source, it moves forward very quickly and therefore it is always using the latest python version. Shotgrid does lack behind. For this reason I had to make a change to the app_store tk-multi-publish2 which basically forks away from the original SG installation. The change is as follows:
 
 Goto: install/app_store/tk-multi-publish2/vx.x.x/python/tk_multi_publish2/api/data.py
 
