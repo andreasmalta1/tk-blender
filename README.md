@@ -1,5 +1,27 @@
-![build](https://github.com/diegogarciahuerta/tk-blender_pre/workflows/build/badge.svg)
+
+
+
+
+
 ![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
+
+This is a slightly modified version of the tk-blender engine compatible with Blender v3 and tested up Blender v3.3.2 LTS.
+The changes are slight and mainly deal with errors that happen during start up.
+The rest is the same and to set it up you should still follow Diego's instructions below.
+Two major points to cover:
+1. Do not forget to install PySide2 in the Blender python package. This is detailed by Diego himself down below.
+2. Since Blender is open source, it moves forward very quickly and tehrefore it is always using the latest python version. Shotgrid does lack behind. For this reason I had to make a change to the app_store tk-multi-publish2 which basically forks away from the original SG installation. The change is as follows:
+
+Goto: install/app_store/tk-multi-publish2/vx.x.x/python/tk_multi_publish2/api/data.py
+
+and change 
+```python
+import collections 
+```
+to
+```python
+import collections.abc as collections
+```
 
 # Shotgun toolkit engine for Blender
 
